@@ -1,11 +1,12 @@
-// import SignupForm from "./SignupForm";
+import { useState } from "react";
+import SignupForm from "./SignupForm";
 
 const HeroSection = () => {
-  // const [isPopupVisible, setIsPopupVisible] = useState(false); 
+  const [isPopupVisible, setIsPopupVisible] = useState(false); 
 
-  // const togglePopup = () => {
-  //   setIsPopupVisible((prev) => !prev); 
-  // };
+  const togglePopup = () => {
+    setIsPopupVisible((prev) => !prev); 
+  };
 
   return (
     <>
@@ -24,7 +25,7 @@ const HeroSection = () => {
 
           {/* Button to show the popup */}
           <button
-            // onClick={togglePopup}
+            onClick={togglePopup}
             className="bg-blue-500 text-white mt-7 px-4 py-4 rounded-md hover:bg-blue-600 transition-transform transform hover:scale-105 active:scale-95"
           >
             Enroll Now
@@ -33,22 +34,20 @@ const HeroSection = () => {
       </section>
 
       {/* Popup container */}
-      {
-      // isPopupVisible && (
-      //   <div className="fixed inset-0 flex items-center justify-center bg-transparent bg-opacity-50 shadow-lg z-50">
-      //     <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md relative">
-      //       {/* Close button */}
-      //       <button
-      //         onClick={togglePopup}
-      //         className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
-      //       >
-      //         &times;
-      //       </button>
-      //       <SignupForm />
-      //     </div>
-      //   </div>
-      // )
-      }
+      {isPopupVisible && (
+        <div className="fixed inset-0 flex items-center justify-center bg-transparent bg-opacity-50 shadow-lg z-50">
+          <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md relative">
+            {/* Close button */}
+            <button
+              onClick={togglePopup}
+              className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+            >
+              &times;
+            </button>
+            <SignupForm />
+          </div>
+        </div>
+      )}
     </>
   );
 };
