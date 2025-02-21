@@ -1,6 +1,7 @@
  
+import { Twitter } from 'lucide';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import React from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -16,10 +17,10 @@ const Footer = () => {
             <span><i className="fas fa-envelope"></i> &nbsp; info@yourbrand.com</span>
           </div>
           <div className="socials">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><Facebook /></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter /></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><Instagram /></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
           </div>
         </div>
 

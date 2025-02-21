@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import SignupForm from "./SignupForm"; // Import the SignupForm component
+import SignupForm from "./SignupForm";
 
 const HeroSection = () => {
-  const [isPopupVisible, setIsPopupVisible] = useState(false); // State to manage popup visibility
+  const [isPopupVisible, setIsPopupVisible] = useState(false); 
 
   const togglePopup = () => {
-    setIsPopupVisible((prev) => !prev); // Toggle popup visibility
+    setIsPopupVisible((prev) => !prev); 
   };
 
   return (
@@ -44,7 +44,6 @@ const HeroSection = () => {
             >
               &times;
             </button>
-            {/* Render the SignupForm inside the popup */}
             <SignupForm />
           </div>
         </div>
